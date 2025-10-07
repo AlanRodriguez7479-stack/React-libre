@@ -1,0 +1,304 @@
+/* === Estilos generales === */
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Contenedor principal */
+.app-container {
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/*  Modo claro  */
+.light {
+  background-color: #f7f7f7;
+  color: #222;
+}
+
+/* === Modo oscuro === */
+.dark {
+  background-color: #121212;
+  color: #eee;
+}
+
+/* === Navegación === */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  margin: 10px 0;
+}
+
+.top-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+nav button {
+  margin: 5px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-weight: 500;
+}
+
+.light nav button {
+  background: #e0e0e0;
+  color: #222;
+}
+
+.dark nav button {
+  background: #2c2c2c;
+  color: #eee;
+}
+
+nav button:hover {
+  background: #888;
+  color: #fff;
+}
+
+/* === Botón de modo === */
+.theme-toggle {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: #0078ff;
+  color: white;
+  font-weight: 500;
+}
+
+.theme-toggle:hover {
+  opacity: 0.8;
+}
+
+/* === Calendario === */
+.calendar-container {
+  text-align: center;
+}
+
+.months-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.month-card {
+  border-radius: 8px;
+  padding: 10px;
+  background: rgba(127, 127, 127, 0.15);
+  transition: background 0.3s;
+}
+
+.month-card:hover {
+  background: rgba(127, 127, 127, 0.3);
+}
+
+/* === Notas === */
+.notes-container {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+.note-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.note-form input,
+.note-form textarea {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.note-form textarea {
+  resize: none;
+  height: 100px;
+}
+
+.note-form button {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  background-color: #0078ff;
+  color: white;
+  cursor: pointer;
+}
+
+.notes-list {
+  list-style: none;
+  padding: 0;
+}
+
+.note-item {
+  background: rgba(127, 127, 127, 0.15);
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.note-item h3 {
+  margin: 0 0 5px 0;
+}
+
+.note-item small {
+  display: block;
+  margin-top: 5px;
+  color: gray;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  border-radius: 8px;
+  border: none;
+  padding: 10px;
+  resize: none;
+  margin-bottom: 10px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.notes-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.notes-container li {
+  background: rgba(127, 127, 127, 0.15);
+  margin-top: 10px;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+/* === Información personal === */
+.info-container {
+  max-width: 600px;
+  margin: auto;
+}
+
+.info-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.info-form input {
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+}
+
+.info-preview {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  background: rgba(127, 127, 127, 0.15);
+}
+
+/* === Lista de tareas === */
+.list-container {
+  max-width: 600px;
+  margin: auto;
+}
+
+.clock-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.clock-container h2 {
+  margin-bottom: 20px;
+}
+
+.clock-container .fecha {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.clock-container .hora {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.list-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 25px;
+  text-align: center;
+}
+
+.list-title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/*  Organización visual */
+.task-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.task-label {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.task-input {
+  width: 70%;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+}
+
+.task-button {
+  width: 120px;
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  background-color: #0078ff;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.task-button:hover {
+  background-color: #005fcc;
+}
+
+.subtitle {
+  margin-top: 20px;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.no-tasks {
+  margin-top: 15px;
+  color: #777;
+  font-style: italic;
+}
